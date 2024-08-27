@@ -1,0 +1,227 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50e3c2;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+.description {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.description ol {
+    padding-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-with-button {
+    display: flex;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.submit-btn {
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.error {
+    background-color: var(--error-color);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .input-with-button {
+        flex-direction: column;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.loader {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: radial-gradient(circle closest-side,#000 94%,#0000) left/20% 100%;
+    background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat #ddd;
+    animation: l17 2s infinite steps(6);
+    margin: 0 auto 20px;
+}
+
+@keyframes l17 {
+    100% {background-size:120% 100%}
+}
+
+#loading-message, #progress-message {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.process-done {
+    background-color: var(--success-color);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.language-toggle button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.language-toggle button:hover {
+    background-color: var(--secondary-color);
+}
+
+.collapsible-section {
+    margin-bottom: 20px;
+}
+
+.collapse-btn {
+    background-color: #f0f0f0;  /* 연한 회색으로 변경 */
+    color: #333;  /* 텍스트 색상을 어두운 색으로 변경 */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.collapse-btn:hover {
+    background-color: #e0e0e0;  /* 호버 시 약간 더 진한 회색으로 변경 */
+}
+
+.description {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    margin-top: -4px;
+}
